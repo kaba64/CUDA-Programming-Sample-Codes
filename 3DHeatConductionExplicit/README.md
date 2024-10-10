@@ -60,7 +60,7 @@ Programming Massively Parallel Processors: A Hands-on Approach 4th Edition" by D
 ### Computationl Geometry
  To apply thread coarsening, coarsening across the entire grid in the z-dimension is used. Please see the provided figure for thread coarsening in the z-direction. 
  
-![3D cube with pencils in z-direction](ch2/cube.png)
+![3D cube with pencils in z-direction](image/cube.png)
 
 ### Makefile
 
