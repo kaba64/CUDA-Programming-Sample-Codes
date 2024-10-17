@@ -66,7 +66,7 @@ __global__ void sqrtDevice(T* x){
   *x = static_cast<T>(sqrt(static_cast<double>(*x)));
 }
 /*Kernnel with both control and memory divergence.
- It is adopted from references [4].*/
+ It is adopted from references [3].*/
 template<typename T>
 __global__ void sumGPUKernel(T *input,T *output, const size_t nx){
   
@@ -82,7 +82,7 @@ __global__ void sumGPUKernel(T *input,T *output, const size_t nx){
   }
 }
 /*Kernnel with improved control and memory divergence.
- It is adopted from references [4].*/
+ It is adopted from references [3].*/
 template<typename T>
 __global__ void sumGPUKernelCD(T *input, T *output, const size_t nx,const size_t factor){
 
@@ -113,7 +113,7 @@ __global__ void sumGPUKernelCD(T *input, T *output, const size_t nx,const size_t
 }
 /* Kernel using shared memory and warp-level primitives
  * with improved control divergence and memory access patterns.
- * Adapted from references [3] and [4]. */
+ * Adapted from references [2] and [3]. */
 template<typename T>
 __global__ void sumGPUKernelCDSM(T *input,T *output,const size_t nx,const size_t factor){
 
@@ -148,7 +148,7 @@ __global__ void sumGPUKernelCDSM(T *input,T *output,const size_t nx,const size_t
   }
 }    
 /*Kernel using warp-level priitives.
-  It is adopted from references [3]*/
+  It is adopted from references [2]*/
 template<typename T>
 __global__ void reductionShuffle(T *input,T *output,const size_t nx){
 
